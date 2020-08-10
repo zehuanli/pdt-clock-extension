@@ -9,10 +9,10 @@ function clockWrite() {
     s = ptDate.getSeconds();
 	
 	//Set all the date variables
-	day	= d.getDay(),
-	date = d.getDate(),
-	month = d.getMonth(),
-	year = d.getFullYear();
+	day	= ptDate.getDay(),
+	date = ptDate.getDate(),
+	month = ptDate.getMonth(),
+	year = ptDate.getFullYear();
 	
 	h = (h < 10 ? '0' : '') + h;
 	m = (m < 10 ? '0' : '') + m;
