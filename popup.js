@@ -3,26 +3,26 @@ var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 function clockWrite() {
 	//Set all the time variables
-	var d = new Date(),
-	h = d.getUTCHours(),
-	m = d.getUTCMinutes(),
-	s = d.getUTCSeconds();
+    var ptDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"})),
+    h = ptDate.getHours(),
+    m = ptDate.getMinutes(),
+    s = ptDate.getSeconds();
 	
 	//Set all the date variables
-	day	= d.getUTCDay(),
-	date = d.getUTCDate(),
-	month = d.getUTCMonth(),
-	year = d.getUTCFullYear();
+	day	= d.getDay(),
+	date = d.getDate(),
+	month = d.getMonth(),
+	year = d.getFullYear();
 	
 	h = (h < 10 ? '0' : '') + h;
 	m = (m < 10 ? '0' : '') + m;
 	s = (s < 10 ? '0' : '') + s;
 	
-	utctime = (h + ':' + m + ':' + s);
-	utcdate = (days[day] + ' ' + months[month] + ' ' + date + ', ' + year);
+	pt_time = (h + ':' + m + ':' + s);
+	pt_date = (days[day] + ' ' + months[month] + ' ' + date + ', ' + year);
 	
-	document.getElementById("time").firstChild.nodeValue = utctime;
-	document.getElementById("date").firstChild.nodeValue = utcdate;
+	document.getElementById("time").firstChild.nodeValue = pt_time;
+	document.getElementById("date").firstChild.nodeValue = pt_date;
 }
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -9,9 +9,9 @@ function badgeColor()
 	
 function updateClock()
 	{
-	var date = new Date(),
-	hour = date.getUTCHours(),
-	min = date.getUTCMinutes();
+    var ptDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"})),
+    hour = ptDate.getHours(),
+    min = ptDate.getMinutes();
 	
 	hour = ( hour < 10 ? "0" : "" ) + hour;
 	min = ( min < 10 ? "0" : "" ) + min;
