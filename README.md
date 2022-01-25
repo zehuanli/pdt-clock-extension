@@ -1,3 +1,5 @@
+This is forked from [Casey Hunt's work](https://github.com/caseymhunt/utc-clock-extension). I only changed the displayed timezone from UTC to PDT. See original README below:
+
 utc-clock-extension
 ===================
 

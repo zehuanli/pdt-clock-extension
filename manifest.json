@@ -3,8 +3,8 @@
 	
 	"name": "GMT/PDT Clock",
 	"description": "PDT Clock extension for Google Chrome.",
-	"version": "4.1",
-	"author": "Casey Hunt -- casey.hunt (at) gmail.com",
+	"version": "4.1.1",
+	"author": "Zehuan Li, forked from Casey Hunt -- casey.hunt (at) gmail.com",
 	
 	"background": {
 		"scripts": ["bg.js"],
