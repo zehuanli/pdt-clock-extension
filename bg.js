@@ -1,6 +1,11 @@
-//Set badge text refresh rate: 5s
-var refresh = 5000;
-setInterval(updateClock, refresh);
+// Register an alarm to update the time every minute
+chrome.alarms.create({ delayInMinutes: 1 });
+chrome.alarms.onAlarm.addListener(() => {
+  update();
+});
+
+// Initial update
+update();
 
 function badgeColor()
 	{
@@ -21,5 +26,7 @@ function updateClock()
 }
 
 //Run Clock function & set badge
-updateClock();
-badgeColor();
+function update() {
+    updateClock();
+    badgeColor();
+}
